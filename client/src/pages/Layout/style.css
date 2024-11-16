@@ -1,0 +1,28 @@
+.nav-link{
+    border-radius: 10px;
+}
+.nav-link:hover{
+    background-color: #dee3e0;
+}
+#offcanvas{
+    width: 23vw;
+}
+.navbar-toggler{
+    display: none;
+}
+@media(max-width: 993px){
+    #offcanvas{
+        width: 25vw;
+    }
+    .main{
+        margin-left: 200px;
+    }
+}
+@media(max-width:767px){
+    .main{
+        margin-left: 0px;
+    }
+    .navbar-toggler{
+        display: block;
+    }
+}

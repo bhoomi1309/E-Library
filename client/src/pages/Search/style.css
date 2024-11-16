@@ -1,0 +1,29 @@
+.searchResults{
+    margin: 0;
+    padding: 0;
+    left: 44%;
+    position: absolute;
+    top: 35%;
+    list-style: none;
+}
+@media(max-width:767px){
+    .searchResults{
+        left: 20%;
+        top: 38%;
+    }
+}
+.search-item-link {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s ease;
+}
+.arrow{
+    display: none;
+}
+.search-item-link:hover {
+    color: #007bff;
+    font-size: 20px;
+}
+.search-item-link:hover .arrow{
+    display: inline;
+}
