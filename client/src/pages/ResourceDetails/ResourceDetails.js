@@ -77,7 +77,7 @@ function BookDetails() {
                     <div className="d-flex align-items-start">
                         <div style={{ flex: 1 }}>
                             <img
-                                src={book.largeimageofthebook}
+                                src={book.imageURL}
                                 alt={`${book.Title} cover`}
                                 style={{
                                     width: "100%",
