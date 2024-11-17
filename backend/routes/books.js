@@ -51,9 +51,7 @@ router.post("/books", async (req, res) => {
     Author,
     YearOfPublication,
     Publisher,
-    smallimageofthebook,
-    mediumimageofthebook,
-    largeimageofthebook,
+    imageURL
   } = req.body;
 
   try {
@@ -64,9 +62,7 @@ router.post("/books", async (req, res) => {
       !Author ||
       !YearOfPublication ||
       !Publisher ||
-      !smallimageofthebook ||
-      !mediumimageofthebook ||
-      !largeimageofthebook
+      !imageURL
     ) {
       return res.status(400).json({ message: "All fields are required" });
     }
@@ -78,9 +74,7 @@ router.post("/books", async (req, res) => {
       Author,
       YearOfPublication,
       Publisher,
-      smallimageofthebook,
-      mediumimageofthebook,
-      largeimageofthebook,
+      imageURL
     });
 
 
