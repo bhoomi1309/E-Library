@@ -54,7 +54,7 @@ function Dashboard() {
                                 className="hover-card books"
                             >
                                 <img
-                                    src={book.smallimageofthebook}
+                                    src={book.imageURL}
                                     alt={book.Title}
                                     style={{
                                         width: "100%",
