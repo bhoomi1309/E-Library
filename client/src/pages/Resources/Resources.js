@@ -13,9 +13,7 @@ function Resources() {
         Publisher: "",
         YearOfPublication: "",
         ISBN: "",
-        smallimageofthebook: "",
-        mediumimageofthebook: "",
-        largeimageofthebook: ""
+        imageURL: ""
     });
 
     useEffect(() => {
@@ -32,16 +30,7 @@ function Resources() {
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-        if (name === "smallimageofthebook") {
-            setNewBook((prev) => ({
-                ...prev,
-                [name]: value,
-                mediumimageofthebook: value,
-                largeimageofthebook: value,
-            }));
-        } else {
             setNewBook((prev) => ({ ...prev, [name]: value }));
-        }
     };
 
     const handleAddResource = async (e) => {
@@ -56,9 +45,7 @@ function Resources() {
                 Publisher: "",
                 YearOfPublication: "",
                 ISBN: "",
-                smallimageofthebook: "",
-                mediumimageofthebook: "",
-                largeimageofthebook: ""
+                imageURL: ""
             });
         } catch (error) {
             console.error("Error adding new resource:", error);
@@ -85,7 +72,7 @@ function Resources() {
                         <Link to={'/library/resources/' + book.ISBN} className="text-dark text-decoration-none">
                             <div className="card books" style={{ height: "100%" }}>
                                 <img
-                                    src={book.smallimageofthebook}
+                                    src={book.imageURL}
                                     className="card-img-top"
                                     alt={`${book.Title} cover`}
                                     style={{ height: "200px", objectFit: "cover" }}
@@ -181,8 +168,8 @@ function Resources() {
                                         <input
                                             type="url"
                                             className="form-control"
-                                            name="smallimageofthebook"
-                                            value={newBook.smallimageofthebook}
+                                            name="imageURL"
+                                            value={newBook.imageURL}
                                             onChange={handleInputChange}
                                             required
                                         />
